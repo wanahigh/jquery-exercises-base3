@@ -4,6 +4,12 @@
         <meta charset="utf-8">
         <title>Jquery exercices base 3</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="rectangle.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <h1>Exercices Jquery base 3</h1>
@@ -13,11 +19,42 @@
         <!-------------------------------------------- Exercice 1 -------------------------------------->
         <h3><em>Exercice 1</em></h3>
         <p>Céer un bouton et un champ texte dans lequel on affiche le nombre de clics sur le bouton.</p>
+        <button id="bt1" onClick="onClick()">  <p>Clicks: <a id="clicks">0</a></p></button>
+        <script>
+          var clicks = 0;
+          function onClick() {
+          clicks += 1;
+          document.getElementById("clicks").innerHTML = clicks;
 
+          };
+
+          </script>
         <hr>
         <!-------------------------------------------- Exercice 2 -------------------------------------->
         <h3>Exercice 2</h3>
         <p>Céer 2 boutons ("+" et "-") et un champ texte dans lequel on augmente ou baisse le chiffre en fonction des boutons cliqués</p>
+
+
+
+  <button id="bt2"> + </button>
+  <button id="bt3"> - </button>
+   <P id="p"></P>
+   <P id="p2"></P>
+<script>
+      var add = 0;
+      $('#bt2').click(function(){
+      add ++ ;
+      $('#p').text(add);
+      });
+
+      var less= 0;
+      $('#bt3').click(function(){
+      less -- ;
+      $('#p2').text(less);
+
+
+      });
+  </script>
 
         <hr>
         <!-------------------------------------------- Exercice 3 -------------------------------------->
@@ -31,9 +68,45 @@
             <li>Bouton 4 : fait disparaître le rectangle</li>
             <li>Bouton 5 : fait réaparaître le rectangle</li>
         </ul>
-        </p>
 
+              <div id="rectangle" >This is a rectangle!</div>
+               <button type="button"  id="btn4">  <p> 1 </p></button>
+               <button type="button"  id="btn5">  <p> 2 </p></button>
+               <button type="button"  id="btn6">  <p> 3 </p></button>
+                <button type="button"  id="btn7">  <p> 4 </p></button>
+                <button type="button"  id="btn8">  <p> 5 </p></button>
 
+                <script>
+                taille = 50;
+                tailleMax =100;
+                 tailleBasse =10;
+
+              $("#btn4").click(function(){
+                taille=taille+10;
+                $('#rectangle').css('height',taille+'px');
+
+                if (taille>=tailleMax){
+                  $('#rectangle').css('height',tailleBasse+'px');
+                }
+              });
+
+              $("#btn5").click(function(){
+                $('#rectangle').css('background-color','green');
+              });
+
+              $("#btn6").click(function(){
+                $('#rectangle').css('background-color','purple');
+
+              });
+
+                $("#btn7").click(function(){
+                  $('#rectangle').css('display','none');
+              });
+
+              $("#btn8").click(function(){
+                $('#rectangle').css('display','block');
+            });
+              </script>
         <hr>
         <!-------------------------------------------- Exercice 4 -------------------------------------->
         <h3>Exercice 4</h3>
@@ -49,6 +122,13 @@
         <hr>
 
 
+        <button id="lien" />jouer</button>
+        <script>
+        $('#lien').click(function() {
+         window.location = "devinette.html";
+});
+
+            </script>
 
     </body>
 </html>

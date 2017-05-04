@@ -1,0 +1,14 @@
+#rectangle{
+  width:500px;
+  height:200px;
+  border:1px dashed red;
+
+}
+
+#lien{
+  background-color: red;
+  color:black;
+  text-align: center;
+  border:1px solid white;
+  border-radius:20%;
+}

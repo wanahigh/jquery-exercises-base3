@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Jquery exercices base 3</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="rectangle.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous">
+        </script>
+            <script>
+
+  alert("Bienvenue dans ce jeu de devinette !");
+
+   // Cette ligne génère aléatoirement un nombre entre 1 et 100
+   var solution = Math.floor(Math.random() * 100) + 1;
+   var compteur= 0;
+
+   while (nombre !== solution && compteur <= 6)
+   {
+   compteur +=1;
+
+
+   var nombre = Number(prompt("merci de renseigner un nombre entre 1 et 100 :"));
+   if (nombre > solution)
+   {
+     alert(nombre + " est trop grand");
+   }
+
+   else if (nombre < solution)
+   {
+     alert (nombre + " est trop petit");
+
+   }
+   }
+
+   if (nombre = solution && compteur <= 6)
+   {
+      alert("Felicitation la solution etait bien" + solution);
+   }
+
+   else if (compteur > 5)
+
+   {
+      alert ("perdu, la solution était " + solution) ;
+   }
+
+     </script>
+
+</body>
+</html>
